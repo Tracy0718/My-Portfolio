@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Projects | Yug</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+<!-- 3D Canvas Container -->
+<div id="three-canvas"></div>
+<div class="electric-bg"></div>
+
+<!-- Preloader -->
+<div id="preloader" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+    <i class="fas fa-cube"></i>
+</button>
+
+<nav>
+    <div class="logo">YB</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="page-hero">
+    <h1 class="page-title">Projects</h1>
+    <br>
+    <p class="page-subtext">
+        Real-world machine learning systems designed for predictive analytics,
+        intelligent recommendations, and scalable AI solutions.
+    </p>
+</section>
+
+<main>
+    <div class="projects-container">
+  
+      <!-- ================= PROJECT 1 ================= -->
+      <div class="project-card">
+        <div class="project-upper">
+          <h3>ML - Enabled Dashboard for MHRD Schemes</h3>
+          <p>AI-powered educational analytics and forecasting platform.</p>
+          <div class="project-spacer"></div>
+          <div class="buttons-section">
+            <div class="project-buttons">
+              <a href="https://shiksha-dashboard.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+              <a href="https://github.com/Tracy0718/MHRD-ML-Enabled-Dashboard" class="btn btn-github" target="_blank">
+                <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+            <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Educational data from different MHRD schemes was scattered across multiple sources, making it difficult for administrators to analyze trends or make predictions about enrollment and policy outcomes.</p>
+          
+            <p><strong>Solution:</strong> Developed a machine learning powered dashboard that collects and processes educational datasets to generate insights and predictions about scheme performance.</p>
+          
+            <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, React, REST APIs</p>
+          
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Enrollment prediction using regression based ML models.</li>
+              <li>Interactive dashboard for visualizing scheme performance.</li>
+              <li>Automated data cleaning and preprocessing pipelines.</li>
+              <li>Real-time charts and analytics for policy monitoring.</li>
+            </ul>
+          
+            <p><strong>Impact:</strong> Helps decision makers quickly understand education trends and take data-driven actions instead of relying on manual reports.</p>
+          </div>
+      </div>
+  
+      <!-- ================= PROJECT 2 ================= -->
+      <div class="project-card">
+        <div class="project-upper">
+          <h3>Prodvise - Hybrid Recommendation System</h3>
+          <p>Personalized product recommendation engine.</p>
+          <div class="project-spacer"></div>
+          <div class="buttons-section">
+            <div class="project-buttons">
+              <a href="https://prodvise-main.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+              <a href="https://github.com/Tracy0718/Prodvise" class="btn btn-github" target="_blank">
+                <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+            <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Many recommendation systems struggle with the cold-start problem, where new users or products have little data for accurate recommendations.</p>
+          
+            <p><strong>Solution:</strong> Built a hybrid recommendation engine that combines collaborative filtering and content-based filtering to generate better product suggestions.</p>
+          
+            <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Collaborative Filtering Algorithms</p>
+          
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Hybrid recommendation combining multiple ML techniques.</li>
+              <li>User similarity detection for personalized suggestions.</li>
+              <li>Product ranking system based on user preferences.</li>
+              <li>Real-time recommendation updates.</li>
+            </ul>
+          
+            <p><strong>Impact:</strong> Improves recommendation accuracy and helps users discover relevant products faster, increasing engagement.</p>
+          </div>
+      </div>
+  
+      <!-- ================= PROJECT 3 ================= -->
+      <div class="project-card">
+        <div class="project-upper">
+          <h3>SarcasmAI</h3>
+          <p>Sarcasm detection system using NLP.</p>
+          <div class="project-spacer"></div>
+          <div class="buttons-section">
+            <div class="project-buttons">
+              <a href="https://sarcasm-detector-ai.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+              <a href="https://github.com/Tracy0718/SarcasmAI" class="btn btn-github" target="_blank">
+                <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+                View Code
+              </a>
+            </div>
+            <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+          </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Detecting sarcasm in text is difficult for traditional NLP models because sarcasm often depends on context and tone.</p>
+          
+            <p><strong>Solution:</strong> Built a machine learning based NLP system that analyzes sentence structure and linguistic patterns to detect sarcasm in text.</p>
+          
+            <p><strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, NLP Techniques</p>
+          
+            <p><strong>Key Features:</strong></p>
+            <ul>
+              <li>Text preprocessing including tokenization and stopword removal.</li>
+              <li>Feature extraction using TF-IDF and linguistic patterns.</li>
+              <li>Classification model trained to identify sarcastic statements.</li>
+              <li>Confidence score showing probability of sarcasm.</li>
+            </ul>
+          
+            <p><strong>Impact:</strong> Achieved around <strong>87% accuracy</strong> in sarcasm detection, demonstrating the effectiveness of machine learning in understanding complex language patterns.</p>
+          </div>
+      </div>
+  
+    </div>
+  </main>
+
+<footer>
+© 2026 Yug Bhatnagar
+</footer>
+
+
+
+<script src="toggleDetails.js"></script>
+<script src="preloader.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

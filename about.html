@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About | Yug</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- 3D Canvas Container -->
+<div id="three-canvas"></div>
+<div class="electric-bg"></div>
+
+<!-- Preloader -->
+<div id="preloader" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+    <i class="fas fa-cube"></i>
+</button>
+
+<nav>
+    <div class="logo">YB</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section class="page-hero">
+    <h1 class="page-title">About Me</h1>
+    <p class="page-subtext">
+        I am a passionate and driven Machine Learning Developer currently pursuing B.Tech in Computer Science & Engineering at Lovely Professional University.
+        My core interest lies in building intelligent AI systems that transform raw data into meaningful insights.
+    </p>
+</section>
+
+<section class="education-section">
+    <h2 class="section-title">Education</h2>
+    <div class="education-timeline">
+        
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Bachelor of Technology</h3>
+                <span class="edu-period">2023 - Present</span>
+            </div>
+            <h4>Lovely Professional University</h4>
+            <p class="edu-location">Phagwara, Punjab</p>
+            <div class="edu-details">
+                <span class="edu-grade">CGPA: 8.1</span>
+                <span class="edu-field">Computer Science & Engineering</span>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Intermediate</h3>
+                <span class="edu-period">2022 - 2023</span>
+            </div>
+            <h4>Jain Public School</h4>
+            <p class="edu-location">Rewari, Haryana</p>
+            <div class="edu-details">
+                <span class="edu-grade">Percentage: 87%</span>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Matriculation</h3>
+                <span class="edu-period">2020 - 2021</span>
+            </div>
+            <h4>Jain Public School</h4>
+            <p class="edu-location">Rewari, Haryana</p>
+            <div class="edu-details">
+                <span class="edu-grade">Percentage: 94%</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="info-section">
+
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>Technical Expertise</h3>
+            <ul>
+                <li>Languages: Python, C++, Java</li>
+                <li>ML Libraries: TensorFlow, PyTorch, Scikit-learn</li>
+                <li>Data Tools: Pandas, NumPy, Tableau</li>
+                <li>Version Control: Git, DVC</li>
+                <li>Database: MongoDB</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Core ML Skills</h3>
+            <ul>
+                <li>Supervised & Unsupervised Learning</li>
+                <li>Feature Engineering</li>
+                <li>Model Evaluation & Optimization</li>
+                <li>Hybrid Recommendation Systems</li>
+                <li>Data Cleaning Pipelines</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Achievements</h3>
+            <ul>
+                <li>5★ Python on HackerRank</li>
+                <li>100+ LeetCode Problems Solved</li>
+                <li>Qualified Adobe India Hackathon</li>
+                <li>Strong Algorithmic Thinking</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Career Vision</h3>
+            <p>
+                To contribute to innovative AI-driven products by combining strong analytical thinking,
+                scalable system design, and machine learning expertise.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+© 2026 Yug Bhatnagar
+</footer>
+
+<script src="preloader.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+

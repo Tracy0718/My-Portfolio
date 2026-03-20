@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact | Yug</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- 3D Canvas Container -->
+<div id="three-canvas"></div>
+<div class="electric-bg"></div>
+
+<!-- Preloader -->
+<div id="preloader" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+    <i class="fas fa-cube"></i>
+</button>
+
+<nav>
+    <div class="logo">YB</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<main class="contact-page">
+
+    <section class="get-in-touch">
+        <div class="get-in-touch-header">
+            <h1 class="get-in-touch-title">Get In Touch</h1>
+            <p class="get-in-touch-subtitle">Send me a message and I'll get back to you soon.</p>
+        </div>
+
+        <div class="get-in-touch-grid">
+            <div class="get-in-touch-left">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">PHONE</span>
+                        <a class="contact-card-link" href="tel:+918708917493">+91 8708917493</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">EMAIL</span>
+                        <a class="contact-card-link" href="mailto:yugbhatnagar291@gmail.com">yugbhatnagar291@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">LINKEDIN</span>
+                        <a class="contact-card-link" href="https://www.linkedin.com/in/yugbhatnagar18/" target="_blank" rel="noreferrer">linkedin.com/in/yugbhatnagar18/</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">GITHUB</span>
+                        <a class="contact-card-link" href="https://github.com/Tracy0718" target="_blank" rel="noreferrer">github.com/Tracy0718</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-in-touch-right">
+                <form
+                    id="contactForm"
+                    class="contact-form"
+                    action="https://formsubmit.co/yugbhatnagar291@gmail.com"
+                    method="POST"
+                >
+                    <!-- Basic metadata for the email service -->
+                    <input type="hidden" name="_subject" value="Portfolio Message">
+                    <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="contact-form-row">
+                        <input
+                            class="contact-input"
+                            type="text"
+                            name="name"
+                            aria-label="Your name"
+                            autocomplete="name"
+                            placeholder="YOUR NAME"
+                            required
+                        />
+                    </div>
+
+                    <div class="contact-form-row">
+                        <input
+                            class="contact-input"
+                            type="email"
+                            name="email"
+                            aria-label="Your email"
+                            autocomplete="email"
+                            placeholder="YOUR EMAIL"
+                            required
+                        />
+                    </div>
+
+                    <div class="contact-form-row">
+                        <textarea
+                            class="contact-textarea"
+                            name="message"
+                            aria-label="Your message"
+                            rows="7"
+                            placeholder="YOUR MESSAGE"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn contact-send-btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact-sent-modal" class="contact-sent-modal" aria-hidden="true">
+        <div class="contact-sent-modal-inner">
+            <div class="contact-sent-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message sent successfully!</h3>
+            <p>Thanks - your message has been delivered to my inbox.</p>
+            <button type="button" class="btn contact-sent-close" id="contact-sent-close">Close</button>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    (function () {
+        const modal = document.getElementById('contact-sent-modal');
+        const closeBtn = document.getElementById('contact-sent-close');
+        if (!modal || !closeBtn) return;
+
+        const PENDING_KEY = 'yb_contact_popup_pending';
+        const params = new URLSearchParams(window.location.search);
+        const sent = params.get('sent');
+
+        const pending = (() => {
+            try {
+                return localStorage.getItem(PENDING_KEY) === '1';
+            } catch (e) {
+                return false;
+            }
+        })();
+
+        if (sent === '1' && pending) {
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+
+            // Clear pending flag so refresh doesn't re-open it
+            try {
+                localStorage.removeItem(PENDING_KEY);
+            } catch (e) {}
+
+            // Remove ?sent=1 from URL (prevents re-trigger on refresh)
+            try {
+                const u = new URL(window.location.href);
+                u.searchParams.delete('sent');
+                window.history.replaceState({}, '', u.pathname + (u.hash || ''));
+            } catch (e) {}
+        }
+
+        const close = () => {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        };
+
+        closeBtn.addEventListener('click', close);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) close();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) close();
+        });
+    })();
+</script>
+
+<script>
+    // FormSubmit needs an absolute _next URL; set it dynamically to your current page.
+    (function () {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+        const nextInput = form.querySelector('input[name="_next"]');
+        if (!nextInput) return;
+
+        form.addEventListener('submit', () => {
+            try {
+                // Mark that we should show the success modal when redirected back
+                try {
+                    localStorage.setItem('yb_contact_popup_pending', '1');
+                } catch (e) {}
+
+                const next = new URL(window.location.href);
+                next.searchParams.set('sent', '1');
+                nextInput.value = next.toString();
+            } catch (e) {
+                // ignore
+            }
+        });
+    })();
+</script>
+
+<footer>
+© 2026 Yug Bhatnagar
+</footer>
+
+<script src="preloader.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home | Yug</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- 3D Canvas Container -->
+<div id="three-canvas"></div>
+<div class="electric-bg"></div>
+
+<!-- Preloader -->
+<div id="preloader" class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<!-- Theme Toggle Button (Fixed Position) -->
+<button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+    <i class="fas fa-cube"></i>
+</button>
+
+<nav>
+    <div class="logo">YB</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+<section id="home" class="hero-section home-hero">
+    <div class="home-badges home-reveal">
+        <span class="home-badge"><i class="fa-solid fa-brain"></i> ML Engineer</span>
+        <span class="home-badge"><i class="fa-solid fa-chart-line"></i> Data-Driven Systems</span>
+        <span class="home-badge"><i class="fa-solid fa-cubes"></i> Product Mindset</span>
+        <span class="home-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Generative AI Systems</span>
+        <span class="home-badge"><i class="fa-solid fa-cloud-arrow-up"></i> MLOps & Deployment</span>
+    </div>
+
+    <h1 class="hero-title home-reveal">
+        Hii, I'm <span>Yug Bhatnagar</span>
+    </h1>
+
+    <h2 class="hero-role home-reveal">
+        <span class="role-rotator" id="heroRoleText">Machine Learning Developer</span>
+    </h2>
+
+    <p class="hero-desc home-reveal">
+        Building intelligent AI solutions, predictive models, and scalable machine learning systems.
+        I focus on turning messy real-world data into clean pipelines, reliable models, and clear dashboards.
+    </p>
+
+    <div class="home-cta-row home-reveal">
+        <a href="Yug_CV_Resume.pdf" download class="btn">Download Resume</a>
+        <a href="#projects" class="btn home-btn-secondary">View Projects</a>
+    </div>
+
+    <div class="home-social home-reveal" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/yugbhatnagar18/" target="_blank" rel="noreferrer" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/Tracy0718" target="_blank" rel="noreferrer" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:yugbhatnagar291@gmail.com" title="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.instagram.com/yugbhatnagar_18" target="_blank" rel="noreferrer" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</section>
+
+<section class="home-section home-highlights">
+    <div class="home-section-head home-reveal">
+        <h2 class="home-section-title">What I deliver</h2>
+        <p class="home-section-subtitle">Practical ML that ships, scales, and makes decisions easier.</p>
+    </div>
+
+    <div class="info-grid home-reveal">
+        <div class="info-card">
+            <h3>End-to-end ML workflows</h3>
+            <p>From raw data → preprocessing → model training → evaluation → deployment-ready outputs.</p>
+            <div class="tag-list">
+                <span class="tag">Pipelines</span>
+                <span class="tag">Feature Engineering</span>
+                <span class="tag">Evaluation</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Recommendation systems</h3>
+            <p>Hybrid recommenders combining collaborative + content signals for better relevance.</p>
+            <div class="tag-list">
+                <span class="tag">CF</span>
+                <span class="tag">CBF</span>
+                <span class="tag">Hybrid</span>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h3>Dashboards & insights</h3>
+            <p>Clear analytics and forecasting to support data-driven decisions.</p>
+            <div class="tag-list">
+                <span class="tag">Forecasting</span>
+                <span class="tag">Visualization</span>
+                <span class="tag">Monitoring</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-section home-cta">
+    <div class="home-cta-card home-reveal">
+        <div>
+            <h2 class="home-section-title">Let’s build something impactful</h2>
+            <p class="home-section-subtitle">Open to internships, collaborations, and ML projects.</p>
+        </div>
+        <div class="home-cta-actions">
+            <a href="#contact" class="btn">Contact Me</a>
+            <a href="#certificates" class="btn home-btn-secondary">See Certificates</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="page-hero">
+    <h1 class="page-title">About Me</h1>
+    <p class="page-subtext">
+        I am a passionate and driven Machine Learning Developer currently pursuing B.Tech in Computer Science & Engineering at Lovely Professional University.
+        My core interest lies in building intelligent AI systems that transform raw data into meaningful insights.
+    </p>
+</section>
+
+<section class="education-section">
+    <h2 class="section-title">Education</h2>
+    <div class="education-timeline">
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Bachelor of Technology</h3>
+                <span class="edu-period">2023 - Present</span>
+            </div>
+            <h4>Lovely Professional University</h4>
+            <p class="edu-location">Phagwara, Punjab</p>
+            <div class="edu-details">
+                <span class="edu-grade">CGPA: 8.1</span>
+                <span class="edu-field">Computer Science & Engineering</span>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Intermediate</h3>
+                <span class="edu-period">2022 - 2023</span>
+            </div>
+            <h4>Jain Public School</h4>
+            <p class="edu-location">Rewari, Haryana</p>
+            <div class="edu-details">
+                <span class="edu-grade">Percentage: 87%</span>
+            </div>
+        </div>
+
+        <div class="education-card">
+            <div class="edu-header">
+                <h3>Matriculation</h3>
+                <span class="edu-period">2020 - 2021</span>
+            </div>
+            <h4>Jain Public School</h4>
+            <p class="edu-location">Rewari, Haryana</p>
+            <div class="edu-details">
+                <span class="edu-grade">Percentage: 94%</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Technical Expertise</h3>
+            <ul>
+                <li>Languages: Python, C++, Java</li>
+                <li>ML Libraries: TensorFlow, PyTorch, Scikit-learn</li>
+                <li>Data Tools: Pandas, NumPy, Tableau</li>
+                <li>Version Control: Git, DVC</li>
+                <li>Database: MongoDB</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Core ML Skills</h3>
+            <ul>
+                <li>Supervised & Unsupervised Learning</li>
+                <li>Feature Engineering</li>
+                <li>Model Evaluation & Optimization</li>
+                <li>Hybrid Recommendation Systems</li>
+                <li>Data Cleaning Pipelines</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Achievements</h3>
+            <ul>
+                <li>5★ Python on HackerRank</li>
+                <li>100+ LeetCode Problems Solved</li>
+                <li>Qualified Adobe India Hackathon</li>
+                <li>Strong Algorithmic Thinking</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Career Vision</h3>
+            <p>
+                To contribute to innovative AI-driven products by combining strong analytical thinking,
+                scalable system design, and machine learning expertise.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="page-hero">
+    <h1 class="page-title">Projects</h1>
+    <br>
+    <p class="page-subtext">
+        Real-world machine learning systems designed for predictive analytics,
+        intelligent recommendations, and scalable AI solutions.
+    </p>
+</section>
+
+<div class="projects-container">
+    <div class="project-card">
+        <div class="project-upper">
+            <h3>ML - Enabled Dashboard for MHRD Schemes</h3>
+            <p>AI-powered educational analytics and forecasting platform.</p>
+            <div class="project-spacer"></div>
+            <div class="buttons-section">
+                <div class="project-buttons">
+                    <a href="https://shiksha-dashboard.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+                    <a href="https://github.com/Tracy0718/MHRD-ML-Enabled-Dashboard" class="btn btn-github" target="_blank">
+                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+                <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+            </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Educational data from different MHRD schemes was scattered across multiple sources, making it difficult for administrators to analyze trends or make predictions about enrollment and policy outcomes.</p>
+            <p><strong>Solution:</strong> Developed a machine learning powered dashboard that collects and processes educational datasets to generate insights and predictions about scheme performance.</p>
+            <p><strong>Tech Stack:</strong> Python, Pandas, Scikit-learn, React, REST APIs</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Enrollment prediction using regression based ML models.</li>
+                <li>Interactive dashboard for visualizing scheme performance.</li>
+                <li>Automated data cleaning and preprocessing pipelines.</li>
+                <li>Real-time charts and analytics for policy monitoring.</li>
+            </ul>
+            <p><strong>Impact:</strong> Helps decision makers quickly understand education trends and take data-driven actions instead of relying on manual reports.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-upper">
+            <h3>Prodvise - Hybrid Recommendation System</h3>
+            <p>Personalized product recommendation engine.</p>
+            <div class="project-spacer"></div>
+            <div class="buttons-section">
+                <div class="project-buttons">
+                    <a href="https://prodvise-main.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+                    <a href="https://github.com/Tracy0718/Prodvise" class="btn btn-github" target="_blank">
+                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+                <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+            </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Many recommendation systems struggle with the cold-start problem, where new users or products have little data for accurate recommendations.</p>
+            <p><strong>Solution:</strong> Built a hybrid recommendation engine that combines collaborative filtering and content-based filtering to generate better product suggestions.</p>
+            <p><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas, Collaborative Filtering Algorithms</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Hybrid recommendation combining multiple ML techniques.</li>
+                <li>User similarity detection for personalized suggestions.</li>
+                <li>Product ranking system based on user preferences.</li>
+                <li>Real-time recommendation updates.</li>
+            </ul>
+            <p><strong>Impact:</strong> Improves recommendation accuracy and helps users discover relevant products faster, increasing engagement.</p>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-upper">
+            <h3>SarcasmAI</h3>
+            <p>Sarcasm detection system using NLP.</p>
+            <div class="project-spacer"></div>
+            <div class="buttons-section">
+                <div class="project-buttons">
+                    <a href="https://sarcasm-detector-ai.vercel.app/" class="btn btn-project" target="_blank">View Project</a>
+                    <a href="https://github.com/Tracy0718/SarcasmAI" class="btn btn-github" target="_blank">
+                        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View Code
+                    </a>
+                </div>
+                <button class="btn project-toggle-btn" onclick="toggleDetails(this)">View Details</button>
+            </div>
+        </div>
+        <br>
+        <div class="project-details">
+            <p><strong>Problem:</strong> Detecting sarcasm in text is difficult for traditional NLP models because sarcasm often depends on context and tone.</p>
+            <p><strong>Solution:</strong> Built a machine learning based NLP system that analyzes sentence structure and linguistic patterns to detect sarcasm in text.</p>
+            <p><strong>Tech Stack:</strong> Python, NLTK, Scikit-learn, NLP Techniques</p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Text preprocessing including tokenization and stopword removal.</li>
+                <li>Feature extraction using TF-IDF and linguistic patterns.</li>
+                <li>Classification model trained to identify sarcastic statements.</li>
+                <li>Confidence score showing probability of sarcasm.</li>
+            </ul>
+            <p><strong>Impact:</strong> Achieved around <strong>87% accuracy</strong> in sarcasm detection, demonstrating the effectiveness of machine learning in understanding complex language patterns.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates" class="page-hero">
+    <h1 class="page-title">Certificates</h1>
+    <br>
+    <p class="page-subtext">
+        Certifications that reflect my expertise and commitment to continuous learning.
+    </p>
+</section>
+
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Mastered Python Using AI</h3>
+            <p><strong>Issuer:</strong> AI for Techies</p>
+            <p><strong>Date:</strong> July 2025</p>
+            <div class="cert-meta tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">AI</span>
+            </div>
+            <div class="cert-actions">
+                <a class="btn btn-project" href="https://www.linkedin.com/posts/yugbhatnagar18_ai-python-techskills-activity-7350111409600421889-pcaV?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgIoU0BYCkK28jiYyFyNcg0kHw_Q6UZdGE" target="_blank" rel="noreferrer">View Certificate</a>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Adobe India Hackathon</h3>
+            <p><strong>Issuer:</strong> Unstop</p>
+            <p><strong>Date:</strong> June 2025</p>
+            <div class="cert-meta tag-list">
+                <span class="tag">Hackathon</span>
+                <span class="tag">Problem Solving</span>
+            </div>
+            <div class="cert-actions">
+                <a class="btn btn-project" href="https://www.linkedin.com/posts/yugbhatnagar18_i-am-excited-to-announce-that-i-successfully-activity-7398776985386180609-q1f6/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgIoU0BYCkK28jiYyFyNcg0kHw_Q6UZdGE" target="_blank" rel="noreferrer">View Certificate</a>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Human Computer Interaction</h3>
+            <p><strong>Issuer:</strong> NPTEL (IIIT Delhi, IIT Madras)</p>
+            <p><strong>Date:</strong> April 2025</p>
+            <div class="cert-meta tag-list">
+                <span class="tag">HCI</span>
+                <span class="tag">UX</span>
+                <span class="tag">Design</span>
+            </div>
+            <div class="cert-actions">
+                <a class="btn btn-project" href="https://www.linkedin.com/posts/yugbhatnagar18_nptel-humancomputerinteraction-uxdesign-activity-7348009584067756034-rhE7/?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgIoU0BYCkK28jiYyFyNcg0kHw_Q6UZdGE" target="_blank" rel="noreferrer">View Certificate</a>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Responsive Web Design</h3>
+            <p><strong>Issuer:</strong> freeCodeCamp</p>
+            <p><strong>Date:</strong> November 2023</p>
+            <div class="cert-meta tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive</span>
+            </div>
+            <div class="cert-actions">
+                <a class="btn btn-project" href="https://www.linkedin.com/posts/yugbhatnagar18_webdesign-certification-freecodecamp-activity-7135995387651256320-6NGL?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEgIoU0BYCkK28jiYyFyNcg0kHw_Q6UZdGE" target="_blank" rel="noreferrer">View Certificate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="page-hero">
+    <h1 class="page-title">Skills</h1>
+    <br>
+    <p class="page-subtext">
+        Core competencies and technologies I specialize in.
+    </p>
+</section>
+
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>Languages</h3>
+            <div class="tag-list">
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">C</span>
+                <span class="tag">Java</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Tools / Platforms</h3>
+            <div class="tag-list">
+                <span class="tag">MongoDB</span>
+                <span class="tag">Django</span>
+                <span class="tag">Tableau</span>
+                <span class="tag">TensorFlow</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">Kubeflow</span>
+                <span class="tag">DVC</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Soft Skills</h3>
+            <div class="tag-list">
+                <span class="tag">Problem-Solving</span>
+                <span class="tag">Leadership</span>
+                <span class="tag">Adaptability</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section id="achievements" class="page-hero">
+    <h1 class="page-title">Achievements</h1>
+    <br>
+    <p class="page-subtext">
+        Highlights from my resume that reflect consistent growth and strong problem-solving.
+    </p>
+</section>
+
+<section class="info-section">
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>5★ Python on HackerRank</h3>
+            <p>
+                Earned a 5-star rating in Python on HackerRank, demonstrating strong problem-solving and programming proficiency.
+            </p>
+            <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">HackerRank</span>
+                <span class="tag">Problem Solving</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>Qualified for Adobe India Hackathon</h3>
+            <p>
+                Qualified for the Adobe India Hackathon, strengthening my ability to work under pressure and build real solutions.
+            </p>
+            <div class="tag-list">
+                <span class="tag">Hackathon</span>
+                <span class="tag">AI</span>
+                <span class="tag">Teamwork</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>100+ LeetCode Problems</h3>
+            <p>
+                Solved 100+ LeetCode problems with a strong focus on data structures and algorithms.
+            </p>
+            <div class="tag-list">
+                <span class="tag">DSA</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">LeetCode</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact-section contact-page">
+    <div class="get-in-touch">
+        <div class="get-in-touch-header">
+            <h1 class="get-in-touch-title">Get In Touch</h1>
+            <p class="get-in-touch-subtitle">Send me a message and I'll get back to you soon.</p>
+        </div>
+
+        <div class="get-in-touch-grid">
+            <div class="get-in-touch-left">
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">PHONE</span>
+                        <a class="contact-card-link" href="tel:+918708917493">+91 8708917493</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">EMAIL</span>
+                        <a class="contact-card-link" href="mailto:yugbhatnagar291@gmail.com">yugbhatnagar291@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">LINKEDIN</span>
+                        <a class="contact-card-link" href="https://www.linkedin.com/in/yugbhatnagar18/" target="_blank" rel="noreferrer">linkedin.com/in/yugbhatnagar18/</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="contact-card-body">
+                        <span class="contact-card-label">GITHUB</span>
+                        <a class="contact-card-link" href="https://github.com/Tracy0718" target="_blank" rel="noreferrer">github.com/Tracy0718</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="get-in-touch-right">
+                <form
+                    id="contactForm"
+                    class="contact-form"
+                    action="https://formsubmit.co/yugbhatnagar291@gmail.com"
+                    method="POST"
+                >
+                    <input type="hidden" name="_subject" value="Portfolio Message">
+                    <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="contact-form-row">
+                        <input
+                            class="contact-input"
+                            type="text"
+                            name="name"
+                            aria-label="Your name"
+                            autocomplete="name"
+                            placeholder="YOUR NAME"
+                            required
+                        />
+                    </div>
+
+                    <div class="contact-form-row">
+                        <input
+                            class="contact-input"
+                            type="email"
+                            name="email"
+                            aria-label="Your email"
+                            autocomplete="email"
+                            placeholder="YOUR EMAIL"
+                            required
+                        />
+                    </div>
+
+                    <div class="contact-form-row">
+                        <textarea
+                            class="contact-textarea"
+                            name="message"
+                            aria-label="Your message"
+                            rows="7"
+                            placeholder="YOUR MESSAGE"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn contact-send-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact-sent-modal" class="contact-sent-modal" aria-hidden="true">
+        <div class="contact-sent-modal-inner">
+            <div class="contact-sent-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message sent successfully!</h3>
+            <p>Thanks - your message has been delivered to my inbox.</p>
+            <button type="button" class="btn contact-sent-close" id="contact-sent-close">Close</button>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+    © 2026 Yug Bhatnagar
+</footer>
+
+<script src="toggleDetails.js"></script>
+<script src="preloader.js"></script>
+<script src="script.js"></script>
+<script>
+    // Ensure switchTheme is available globally
+    if (typeof switchTheme === 'undefined') {
+        window.switchTheme = function() {
+            console.log('Theme switch triggered');
+            if (window.triggerThemeSwitch) {
+                window.triggerThemeSwitch();
+            }
+        };
+    }
+</script>
+
+<script>
+    // Home page reveal animation (kept page-scoped)
+    if (typeof gsap !== 'undefined') {
+        gsap.from(".home-reveal", {
+            opacity: 0,
+            y: 25,
+            duration: 0.9,
+            stagger: 0.08,
+            ease: "power2.out"
+        });
+    }
+</script>
+
+<script>
+    // Contact form success popup (triggered via query param ?sent=1)
+    (function () {
+        const modal = document.getElementById('contact-sent-modal');
+        const closeBtn = document.getElementById('contact-sent-close');
+        if (!modal || !closeBtn) return;
+
+        const PENDING_KEY = 'yb_contact_popup_pending';
+        const params = new URLSearchParams(window.location.search);
+        const sent = params.get('sent');
+
+        const pending = (() => {
+            try {
+                return localStorage.getItem(PENDING_KEY) === '1';
+            } catch (e) {
+                return false;
+            }
+        })();
+
+        if (sent === '1' && pending) {
+            modal.classList.add('open');
+            modal.setAttribute('aria-hidden', 'false');
+
+            // Clear pending flag so refresh doesn't re-open it
+            try {
+                localStorage.removeItem(PENDING_KEY);
+            } catch (e) {}
+
+            // Remove ?sent=1 from URL (prevents re-trigger on refresh)
+            try {
+                const u = new URL(window.location.href);
+                u.searchParams.delete('sent');
+                window.history.replaceState({}, '', u.pathname + (u.hash || ''));
+            } catch (e) {}
+        }
+
+        const close = () => {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+        };
+
+        closeBtn.addEventListener('click', close);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) close();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('open')) close();
+        });
+    })();
+</script>
+
+<script>
+    // FormSubmit needs an absolute _next URL; set it dynamically to your current page.
+    (function () {
+        const form = document.getElementById('contactForm');
+        if (!form) return;
+        const nextInput = form.querySelector('input[name="_next"]');
+        if (!nextInput) return;
+
+        form.addEventListener('submit', () => {
+            try {
+                // Mark that we should show the success modal when redirected back
+                try {
+                    localStorage.setItem('yb_contact_popup_pending', '1');
+                } catch (e) {}
+
+                const next = new URL(window.location.href);
+                next.searchParams.set('sent', '1');
+                nextInput.value = next.toString();
+            } catch (e) {
+                // If URL parsing fails, keep FormSubmit default behavior.
+            }
+        });
+    })();
+</script>
+
+<script>
+    // Role rotator under your name (sequential animated titles)
+    (function () {
+        const el = document.getElementById('heroRoleText');
+        if (!el) return;
+        const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduceMotion) return;
+
+        const roles = [
+            'Machine Learning Developer',
+            'AI Agent Builder',
+            'Machine Learning Engineer',
+            'AI/ML Specialist'
+        ];
+
+        let idx = 0;
+        // Start after initial reveal feels natural.
+        const startDelay = 2200;
+        setTimeout(() => {
+            setInterval(() => {
+                const nextIdx = (idx + 1) % roles.length;
+                idx = nextIdx;
+
+                el.classList.remove('role-swap');
+                // Force reflow so animation always re-triggers
+                void el.offsetWidth;
+                el.textContent = roles[idx];
+                el.classList.add('role-swap');
+            }, 3200);
+        }, startDelay);
+    })();
+</script>
+
+</body>
+</html>
+

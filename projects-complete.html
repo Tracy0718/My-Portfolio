@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Yug - WORKING VERSION</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #030712;
+            color: white;
+            padding: 50px;
+            margin: 0;
+        }
+        .projects-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+        .project-card {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid #00d4ff;
+            border-radius: 15px;
+            width: 350px;
+            min-height: 500px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+        .project-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        .project-desc {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+        .project-btn {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .project-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 212, 255, 0.4);
+        }
+        .project-details {
+            display: none;
+            background: rgba(0, 212, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #00d4ff;
+        }
+        .project-details.show {
+            display: block !important;
+        }
+        h1 {
+            text-align: center;
+            color: #00d4ff;
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <nav style="display:flex;justify-content:space-between;align-items:center;padding:20px 8%;margin-bottom:20px;">
+        <div style="font-weight:700;font-size:28px;color:#00d4ff;">YB</div>
+        <ul style="list-style:none;display:flex;gap:30px;margin:0;padding:0;">
+            <li><a href="index.html" style="color:#94a3b8;text-decoration:none;">Home</a></li>
+            <li><a href="about.html" style="color:#94a3b8;text-decoration:none;">About</a></li>
+            <li><a href="projects.html" style="color:#94a3b8;text-decoration:none;">Projects</a></li>
+            <li><a href="certificates.html" style="color:#94a3b8;text-decoration:none;">Certificates</a></li>
+            <li><a href="skills.html" style="color:#94a3b8;text-decoration:none;">Skills</a></li>
+            <li><a href="achievements.html" style="color:#94a3b8;text-decoration:none;">Achievements</a></li>
+            <li><a href="contact.html" style="color:#94a3b8;text-decoration:none;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>PROJECTS - FULLY WORKING</h1>
+    
+    <div class="projects-container">
+        
+        <div class="project-card">
+            <div class="project-title">ML Dashboard for MHRD</div>
+            <div class="project-desc">AI-powered educational analytics platform</div>
+            <button class="project-btn" onclick="toggleDetails('details1', this)">View Details</button>
+            <div id="details1" class="project-details">
+                <strong>Problem:</strong> Fragmented educational data<br>
+                <strong>Solution:</strong> Predictive models + dashboard<br>
+                <strong>Tech:</strong> Python, Scikit-learn, React<br>
+                <strong>Impact:</strong> Data-driven policy decisions
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-title">Prodvise Recommendation</div>
+            <div class="project-desc">Hybrid recommendation system</div>
+            <button class="project-btn" onclick="toggleDetails('details2', this)">View Details</button>
+            <div id="details2" class="project-details">
+                <strong>Problem:</strong> Cold-start recommendation<br>
+                <strong>Solution:</strong> Collaborative + content filtering<br>
+                <strong>Tech:</strong> Python, Pandas<br>
+                <strong>Impact:</strong> Better personalization
+            </div>
+        </div>
+        
+        <div class="project-card">
+            <div class="project-title">SarcasmAI</div>
+            <div class="project-desc">NLP sarcasm detection</div>
+            <button class="project-btn" onclick="toggleDetails('details3', this)">View Details</button>
+            <div id="details3" class="project-details">
+                <strong>Problem:</strong> Sarcasm detection accuracy<br>
+                <strong>Solution:</strong> Ensemble NLP models<br>
+                <strong>Tech:</strong> NLTK, Scikit-learn<br>
+                <strong>Impact:</strong> 87% accuracy improvement
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleDetails(id, button) {
+            var details = document.getElementById(id);
+            if (details.classList.contains('show')) {
+                details.classList.remove('show');
+                button.textContent = 'View Details';
+            } else {
+                details.classList.add('show');
+                button.textContent = 'Hide Details';
+            }
+            console.log('Toggle:', id);
+        }
+    </script>
+
+</body>
+</html>

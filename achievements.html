@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Achievements | Yug</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 3D Canvas Container -->
+    <div id="three-canvas"></div>
+    <div class="electric-bg"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+        <i class="fas fa-cube"></i>
+    </button>
+
+    <nav>
+        <div class="logo">YB</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-hero">
+        <h1 class="page-title">Achievements</h1>
+        <br>
+        <p class="page-subtext">
+            Key achievements demonstrating consistent growth and strong problem-solving capabilities.
+        </p>
+    </section>
+
+    <main>
+        <section class="info-section">
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <h3>5★ Python on HackerRank</h3>
+                    <p>
+                        Earned a 5-star rating in Python on HackerRank, demonstrating strong problem-solving and programming proficiency.
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">Python</span>
+                        <span class="tag">HackerRank</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Qualified for Adobe India Hackathon</h3>
+                    <p>
+                        Qualified for the Adobe India Hackathon, strengthening my ability to work under pressure and build real solutions.
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">Hackathon</span>
+                        <span class="tag">AI</span>
+                        <span class="tag">Teamwork</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>100+ LeetCode Problems</h3>
+                    <p>
+                        Solved 100+ LeetCode problems with a strong focus on data structures and algorithms.
+                    </p>
+                    <div class="tag-list">
+                        <span class="tag">DSA</span>
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">LeetCode</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Yug Bhatnagar
+    </footer>
+
+    <script src="toggleDetails.js"></script>
+    <script src="preloader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

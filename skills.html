@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skills | Yug</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 3D Canvas Container -->
+    <div id="three-canvas"></div>
+    <div class="electric-bg"></div>
+
+    <!-- Preloader -->
+    <div id="preloader" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle-fixed" onclick="switchTheme()" title="Switch 3D Theme">
+        <i class="fas fa-cube"></i>
+    </button>
+
+    <nav>
+        <div class="logo">YB</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="skills.html">Skills</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-hero">
+        <h1 class="page-title">Skills</h1>
+        <br>
+        <p class="page-subtext">
+            Core competencies and technologies I specialize in.
+        </p>
+    </section>
+
+    <main>
+        <section class="info-section">
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <h3>Languages</h3>
+                    <div class="tag-list">
+                        <span class="tag">C++</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Java</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Tools / Platforms</h3>
+                    <div class="tag-list">
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">Django</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Kubeflow</span>
+                        <span class="tag">DVC</span>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>Soft Skills</h3>
+                    <div class="tag-list">
+                        <span class="tag">Problem-Solving</span>
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Adaptability</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Yug Bhatnagar
+    </footer>
+
+    <script src="toggleDetails.js"></script>
+    <script src="preloader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
