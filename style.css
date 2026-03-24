@@ -1102,6 +1102,8 @@ main{
     transition: 0.4s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-card::after {
@@ -1201,7 +1203,8 @@ main{
 }
 
 .cert-actions {
-    margin-top: 18px;
+    margin-top: auto;
+    padding-top: 18px;
 }
 
 .projects-container {
